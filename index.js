@@ -1,4 +1,4 @@
-//require('dotenv').config()
+require('dotenv').config()
 const express=require('express');
 const app=express();
 app.use(express.json());
@@ -6,7 +6,7 @@ require('./basicMongoose');
 const bcrypt=require('bcryptjs');
 const model=require('./models');
 app.get('',(req,res)=>{
-    res.send("ok its woking");
+    res.send("ok")
 })
 app.post('/signin',async(req,res)=>{
 const value=await Product(req.body.password);
