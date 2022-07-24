@@ -17,4 +17,4 @@ Product=async(value)=>{
   const  hashcode=await bcrypt.hash(value,10);
   return hashcode;
 }
-app.listen(5000);
+app.listen(process.env.PORT||5000);
