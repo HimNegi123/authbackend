@@ -5,6 +5,9 @@ app.use(express.json());
 require('./basicMongoose');
 const bcrypt=require('bcryptjs');
 const model=require('./models');
+app.get('',(req,res)=>{
+    res.send("ok its woking");
+})
 app.post('/signin',async(req,res)=>{
 const value=await Product(req.body.password);
 req.body.password=value;
