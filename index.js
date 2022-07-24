@@ -6,7 +6,7 @@ require('./basicMongoose');
 const bcrypt=require('bcryptjs');
 const model=require('./models');
 app.get('',(req,res)=>{
-    res.send("ok")
+    res.send("ok its work")
 })
 app.post('/signin',async(req,res)=>{
 const value=await Product(req.body.password);
